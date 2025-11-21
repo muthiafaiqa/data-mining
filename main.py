@@ -84,8 +84,13 @@ else:
         else:
             with st.spinner('Menganalisis...'):
                 try:
-                    stopword_remover = tools['stopword']
+                    # ============================
+                    # FIXED KEY !!!
+                    # ============================
+                    stopword_remover = tools['stopwords']
                     stemmer = tools['stemmer']
+                    # ============================
+
                     processed = preprocess_text(input_text, stopword_remover, stemmer)
                     vec = vectorizer.transform([processed])
 
@@ -125,7 +130,7 @@ else:
                 st.metric("Positif", f"{prob_ensemble[1]*100:.1f}%")
 
             # ==============================
-            # BAGIAN PERBANDINGAN MODEL
+            # PERBANDINGAN MODEL
             # ==============================
             if show_comparison:
                 st.subheader("📌 Perbandingan Model")

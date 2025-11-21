@@ -112,11 +112,11 @@ else:
             with st.spinner('Menganalisis...'):
 
                 # Ambil tool preprocessing  
-                stopword_remover = tools['stopword']
+                stopwords_remover = tools['stopwords']
                 stemmer = tools['stemmer']
 
                 # Preprocessing
-                processed = preprocess_text(input_text, stopword_remover, stemmer)
+                processed = preprocess_text(input_text, stopwords_remover, stemmer)
                 vec = vectorizer.transform([processed])
 
                 # Prediksi dari model

@@ -1,0 +1,15 @@
+streamlit
+
+sickit-learn
+joblib
+
+pandas 
+numpy
+
+#NLP bahasa indonesia
+sastrawi
+
+#visual
+matplotlib
+seaborn
+wordcloud
